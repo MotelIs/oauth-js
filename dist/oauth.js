@@ -373,7 +373,7 @@ module.exports = function(Materia) {
       if (wnd) {
         wnd.focus();
         interval = window.setInterval(function() {
-          if (wnd === null || wnd.closed) {
+          if (wnd === null) {
             window.clearInterval(interval);
             if (!gotmessage) {
               if (defer != null) {

@@ -176,7 +176,7 @@ module.exports = (Materia) ->
 			if wnd
 				wnd.focus()
 				interval = window.setInterval () ->
-					if wnd == null || wnd.closed
+					if wnd == null
 						window.clearInterval interval
 						if not gotmessage
 							defer?.reject new Error("The popup was closed")
